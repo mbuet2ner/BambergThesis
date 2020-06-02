@@ -3,16 +3,16 @@
 %%%%%%%%%%%%%%%%%%%
 
 % use the scrbook KOMA document class
-\documentclass[	pdftex, 		%
-		a4paper, 		% DIN A4 format
-		titlepage,		% separate title page
-		%draft,			% draft version, no figures in PDF!
-		final,			% final version
-		\printstyle ,		% see \def in main document (oneside or twoside)
-		11pt,			% font size
-		DIV=calc,
+\documentclass[	pdftex,
+	a4paper, 		% DIN A4 format
+	titlepage,		% separate title page
+	%draft,			% draft version, no figures in PDF!
+	final,			% final version
+	\printstyle ,	% see \def in main document (oneside or twoside)
+	11pt,			% font size
+	DIV=calc,
 ]{scrbook}
-						
+
 \setkomafont{disposition}{\normalfont\bfseries}
 \usepackage{scrhack}
 
@@ -21,12 +21,12 @@
 \usepackage[left=30mm , right=30mm, top=30mm, bottom=30mm]{geometry}
 
 % typesetting
-\usepackage{palatino} 				% Palatino font with sans-serif \sffamily Helvetica
-\usepackage[utf8]{inputenc} 			% Umlaute
-\usepackage[T1]{fontenc}			% extended character set
-\parindent0pt           			% no indentation of the first line
-\parskip1ex             			% gap between paragraphs
-\usepackage{setspace}				% package for line spacing settings
+\usepackage{palatino} 			% Palatino font with sans-serif \sffamily Helvetica
+\usepackage[utf8]{inputenc} 	% Umlaute
+\usepackage[T1]{fontenc}		% extended character set
+\parindent0pt           		% no indentation of the first line
+\parskip1ex             		% gap between paragraphs
+\usepackage{setspace}			% package for line spacing settings
 \singlespacing					% 1,0
 %\onehalfspacing				% 1,5
 %\doublespacing					% 2,0
@@ -36,10 +36,17 @@
 %\usepackage[german=quotes]{csquotes} % Deutsche Anführungszeichen
 
 % BibTex
-\usepackage{natbib}
-\bibliographystyle{plain}
+\usepackage[numbers]{natbib}
+\bibliographystyle{plainnat}
 
+% Advanced time (optional)
+\usepackage{advdate}
 
+%%%%%%%%%%%%%%%%%%%
+% poem
+%%%%%%%%%%%%%%%%%%%
+\usepackage{verse}
+\usepackage{attrib}
 
 %%%%%%%%%%%%%%%%%%%
 % figures & co
@@ -52,7 +59,7 @@
 
 % insert PDF files
 \usepackage{pdfpages}
-% settings for PDF Pages to accept additonal versioned PDF files
+% settings for PDF Pages to accept additional versioned PDF files
 \pdfminorversion=6
 \pdfcompresslevel=9
 \pdfobjcompresslevel=9
@@ -83,10 +90,10 @@
 %\setlength{\TPHorizModule}{1mm}
 %\setlength{\TPVertModule}{\TPHorizModule}
 
-% TUM Corporate Design definitions taken from official templates (tum.de/cd)
+% matching font color
 \newcommand{\UniversitaetLogoBreite}{19mm}
-\newcommand{\UniversitaetLogoHoehe}{1cm}
-\definecolor{UniversitaetFarbe}{RGB}{0,101,189}
+\newcommand{\UniversitaetLogoHoehe}{19cm}
+\definecolor{UniversitaetFarbe}{RGB}{16,66,122}
 
 % blindtext generator
 \usepackage{lipsum}
@@ -135,9 +142,39 @@
 \usepackage{caption}
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
-\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={footnotesize}}
+\captionsetup[lstlisting]{
+	format=listing,
+	labelfont=white,
+	textfont=white,
+	singlelinecheck=false,
+	margin=0pt,
+	font={footnotesize}
+}
 
+%%%%%%%%%%%%%%%%%%%
+% pseudo-code
+%%%%%%%%%%%%%%%%%%%
 
+\usepackage[ruled,vlined]{algorithm2e}
+\DontPrintSemicolon % suppresses semicolon at the end of each line
+
+%%%%%%%%%%%%%%%%%%%
+% images side-by-side
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage{subcaption}
+
+%%%%%%%%%%%%%%%%%%%
+% pretty tables
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage{booktabs}
+
+%%%%%%%%%%%%%%%%%%%
+% enumeration
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage{enumitem}
 
 %%%%%%%%%%%%%%%%%%%
 % header & footer
@@ -146,20 +183,20 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead{}
-\fancyfoot{} 
+\fancyfoot{}
 \renewcommand{\headrulewidth}{0.4pt} % line for header - 0.0pt = no line
 \renewcommand{\footrulewidth}{0.0pt} % line for footer - 0.0pt = no line
 
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter\quad#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\quad#1}}
 
-\fancyhead[LO]{\textit{\rightmark}}	
+\fancyhead[LO]{\textit{\rightmark}}
 \fancyhead[RO]{\textit{\thepage}}
 
 \def\twoside{twoside} % macro needed
 \ifx \printstyle \twoside
 	% adapt footers and headers if two-sided
-	\fancyhead[LE]{\textit{\thepage}}	
+	\fancyhead[LE]{\textit{\thepage}}
 	\fancyhead[RE]{\textit{\rightmark}}
 \fi
 
@@ -173,8 +210,9 @@
 	pdftitle={\titleFirstLanguage},
 	pdfauthor={\authorname},
 	pdfsubject={\titleFirstLanguage},
-	pdfcreator={MiKTeX, LaTeX with hyperref and KOMA-Script based on template by Michael Grupp ( github.com/MichaelGrupp/TTT )},
-	pdfkeywords={Abschlussarbeit, Thesis, TUM}, 
+	pdfcreator={MiKTeX, LaTeX with hyperref and KOMA-Script based on template by Michael Grupp ( github.com/MichaelGrupp/TTT ) and modifications
+			by Malte Büttner ( https://github.com/mbuet2ner/BambergThesis )},
+	pdfkeywords={Abschlussarbeit, Thesis, University of Bamberg},
 	pdfpagemode=UseOutlines,%                                  
 	pdfdisplaydoctitle=true,%                                  
 	pdflang=de%                                              

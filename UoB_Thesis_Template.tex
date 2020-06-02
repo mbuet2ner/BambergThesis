@@ -4,13 +4,13 @@
 
 % chair name not allowed at Department of Informatics
 % remove \phantom{} if you want the chair name on the cover
-\newcommand{\chair}{\phantom{Lehrstuhl f\"ur Musterverfahren}}
-\newcommand{\faculty}{Fakult\"at f\"ur Informatik}
-\newcommand{\uni}{Technische Universit\"at M\"unchen}
+\newcommand{\chair}{\phantom{Cognitive Systems}}
+\newcommand{\faculty}{Information Systems and Applied Computer Sciences}
+\newcommand{\uni}{Otto-Friedrich-Universit\"at Bamberg}
 \newcommand{\studycourse}{Robotics, Cognition, Intelligence}
 
 \newcommand{\authorname}{Max Mustermann}
-\newcommand{\city}{Munich}
+\newcommand{\city}{Bamberg}
 
 \newcommand{\worktype}{Master's Thesis in \studycourse}
 \newcommand{\titleFirstLanguage}{Energy-Saving Approaches for Highly Efficient Procrastination in Robotics Research}
@@ -22,7 +22,7 @@
 
 % set date manually or use \today
 \newcommand{\submissionDate}{\today}
-
+% optionally, yo can use {\AdvanceDate[+1]\today} for tomorrow, yesterday etc.
 
 
 %%%%%%%%%%%%%%%%%%%
@@ -31,8 +31,8 @@
 
 % quick settings
 \def\printstyle{twoside} % set to {twoside} for printing, else {oneside}
-%\def\monochromeCover{} % uncomment if you prefer a black TUM logo on the cover
-\def\monochromeCoverInside{} % uncomment if you prefer a black TUM logo on the inside cover page
+%\def\monochromeCover{} % uncomment if you prefer a black UoB logo on the cover
+\def\monochromeCoverInside{} % uncomment if you prefer a black UoB logo on the inside cover page
 
 % complete settings & packages: see settings.text
 \input{settings} 
@@ -48,14 +48,14 @@
 \frontmatter
 % first part of document before actual content
 
-\include{titlepage}
-\include{titlepage_inside} % needed at Department of Informatics
+\include{titlepage} % first titlepage
+\include{titlepage_inside} % optional second titlepage
 
-\include{content/EidesstattlicheErklaerung}
 \include{content/Abstract}
 \include{content/Acknowledgements}
+\include{content/Poem}
 
-\tableofcontents 
+\tableofcontents
 
 
 \mainmatter
@@ -81,5 +81,7 @@
 % include appendix chapters here
 
 \include{content/AppendixExample}
+% for the University of Bamberg, this has to be on the last page
+\include{content/EidesstattlicheErklaerung}
 
 \end{document}
