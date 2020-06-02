@@ -1,8 +1,11 @@
+![firstpage](https://github.com/mbuet2ner/BambergThesis/blob/master/example.png)
+
 # University of Bamberg Thesis Template
 
-<p align="center">
-  <src="example.png">
-</p>
+![GitHub](https://img.shields.io/github/license/mbuet2ner/BambergThesis)
+![GitHub issues](https://img.shields.io/github/issues-raw/mbuet2ner/BambergThesis)
+![GitHub last commit](https://img.shields.io/github/last-commit/mbuet2ner/BambergThesis)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/mbuet2ner/BambergThesis)
 
 Inofficial LaTeX template with a cover inspired by the new TUM Corporate Design adapted for the University of Bamberg - i.e. minimalistic typography with sans-serif Helvetica font.
 The default serif font for the content part is Palatino, with a slightly wider column width than the vanilla LaTeX book class. For theses, seminars, homeworks etc. at the University of Bamberg.
