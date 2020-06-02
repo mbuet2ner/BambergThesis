@@ -512,6 +512,13 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
+INPUT /home/malte/BambergThesis/images/aurora.jpg
+INPUT /home/malte/BambergThesis/images/aurora.jpg
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /home/malte/BambergThesis/images/aurora.jpg
+INPUT /home/malte/BambergThesis/images/aurora.jpg
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 OUTPUT /home/malte/BambergThesis/content/ExampleChapterTwo.aux
 INPUT /home/malte/BambergThesis/content/ExampleChapterTwo.tex
 INPUT /home/malte/BambergThesis/content/ExampleChapterTwo.tex
@@ -524,6 +531,9 @@ OUTPUT /home/malte/BambergThesis/UoB_Thesis_Template.lot
 INPUT /home/malte/BambergThesis/UoB_Thesis_Template.lol
 INPUT /home/malte/BambergThesis/UoB_Thesis_Template.lol
 OUTPUT /home/malte/BambergThesis/UoB_Thesis_Template.lol
+INPUT /home/malte/BambergThesis/UoB_Thesis_Template.loa
+INPUT /home/malte/BambergThesis/UoB_Thesis_Template.loa
+OUTPUT /home/malte/BambergThesis/UoB_Thesis_Template.loa
 INPUT /home/malte/BambergThesis/UoB_Thesis_Template.bbl
 INPUT /home/malte/BambergThesis/UoB_Thesis_Template.bbl
 OUTPUT /home/malte/BambergThesis/content/AppendixExample.aux
@@ -539,7 +549,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm

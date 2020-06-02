@@ -5,10 +5,10 @@
 \subsection{Subsection One}
 
 \begin{figure}
-\centering
-\includegraphics[width=0.8\textwidth]{aurora.jpg}
-\caption{A figure with a caption}
-\label{fig:aurora}
+  \centering
+  \includegraphics[width=0.8\textwidth]{aurora.jpg}
+  \caption{A figure with a caption}
+  \label{fig:aurora}
 \end{figure}
 
 Figure \ref{fig:aurora} shows a picture.
@@ -17,7 +17,7 @@ Citation of a book \cite{hartley2004}.
 
 Let $x$ and $u$ be variables, then:
 \begin{equation}
-\frac{d}{dx} \left( \int_{0}^{x} f(u)\,du \right) = f(x) ~.
+  \frac{d}{dx} \left( \int_{0}^{x} f(u)\,du \right) = f(x) ~.
 \end{equation}
 
 \lipsum[1-2]
@@ -25,10 +25,10 @@ Let $x$ and $u$ be variables, then:
 \subsection{Subsection Two}
 
 \begin{figure}
-\centering
-\input{images/plot.tikz}
-\caption{A tikz plot with a caption}
-\label{fig:plot}
+  \centering
+  \input{images/plot.tikz}
+  \caption{A tikz plot with a caption}
+  \label{fig:plot}
 \end{figure}
 
 Figure \ref{fig:plot} shows a plot generated with tikz and pgfplots.
@@ -37,17 +37,43 @@ Figure \ref{fig:plot} shows a plot generated with tikz and pgfplots.
 
 \section{Another Section}
 
+\begin{figure}[h]
+  \centering
+  \subcaptionbox{Picture one}
+  {\includegraphics[width=0.4\linewidth]{aurora.jpg}}
+  \label{fig:subcaption_1}
+  \hfill
+  \subcaptionbox{Picture two}
+  {\includegraphics[width=0.4\linewidth]{aurora.jpg}}
+  \label{fig:subcaption_2}
+  \caption{Two pictures side-by-side
+    \protect\\ % use this for linebreaks in caption
+    New line}
+  \label{fig:subcaption}
+\end{figure}
+
 \begin{table}
-\centering
-\begin{tabular}{ l | c || r }
-  1 & 2 & 3 \\
-  4 & 5 & 6 \\
-  7 & 8 & 9 \\
-\end{tabular}
-\caption{A table with numbers}
-\label{tab:numbers}
+  \centering
+  \begin{tabular}{ l | c || r }
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 9 \\
+  \end{tabular}
+  \caption{A table with numbers}
+  \label{tab:numbers}
 \end{table}
 
 Numbers are shown in table \ref{tab:numbers}
 
 \lipsum[6-12]
+
+% example algorithm taken from algorithm2e's documentation
+\begin{algorithm}[H]
+  \SetAlgoLined\KwData{this text}
+  \KwResult{how to write algorithm with \LaTeX2e }
+  initialization\;
+  \While{not at end of this document}{read current\;
+    \eIf{understand}{go to next section\;current section becomes this one\;}
+    {go back to the beginning of current section\;}}
+  \caption{How to write algorithms}
+\end{algorithm}
