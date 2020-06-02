@@ -1,5 +1,9 @@
 # University of Bamberg Thesis Template
 
+<p align="center">
+  <src="example.png">
+</p>
+
 Inofficial LaTeX template with a cover inspired by the new TUM Corporate Design adapted for the University of Bamberg - i.e. minimalistic typography with sans-serif Helvetica font.
 The default serif font for the content part is Palatino, with a slightly wider column width than the vanilla LaTeX book class. For theses, seminars, homeworks etc. at the University of Bamberg.
 
