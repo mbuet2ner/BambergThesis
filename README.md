@@ -5,7 +5,7 @@ The default serif font for the content part is Palatino, with a slightly wider c
 
 In addition to the original version by [Michael Grupp](https://github.com/MichaelGrupp/TTT "Link to original repository") this modified version includes the University of Bamberg logos and colors (titlepage font), the option to use a beautifully formatted poem page, and more relevant LaTeX examples.
 
-[PDF preview](https://github.com/mbuet2ner/BambergThesis/master/UoB_Thesis_Template.pdf "PDF preview")
+[PDF preview](https://github.com/mbuet2ner/BambergThesis/blob/master/UoB_Thesis_Template.pdf "PDF preview")
 
 
 ## Installation
